@@ -59,19 +59,19 @@ public class GUI_AfterLogin
 		{
 		    	if(e.getSource()==Entrn)
 		    	{
-		    		GUI_Questions page5 = new GUI_Questions();
+		    		GUI_Questions page5 = new GUI_Questions("Entertainment");
 		    	}
 		    	else if(e.getSource()==Sprt)
 		    	{
-		    		GUI_Questions page5 = new GUI_Questions();
+		    		GUI_Questions page5 = new GUI_Questions("Sports");
 		    	}
 		    	else if(e.getSource()==Tech)
 		    	{
-		    		GUI_Questions page5 = new GUI_Questions();
+		    		GUI_Questions page5 = new GUI_Questions("Technical");
 		    	}
 		    	else if(e.getSource()==gk)
 		    	{
-		    		GUI_Questions page5 = new GUI_Questions();
+		    		GUI_Questions page5 = new GUI_Questions("General Knowledge");
 		    	}
 			
 		}
