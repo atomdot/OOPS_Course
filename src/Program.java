@@ -3,7 +3,7 @@ import java.util.Random;
 
 public class Program {
 
-	
+
 	public static void main(String[] args) throws Exception {
 		//GUI Page1 = new GUI();
 		//GUI_AfterLogin page2 = new GUI_AfterLogin();
