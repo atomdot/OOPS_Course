@@ -50,7 +50,7 @@ public class GUI_DeleteAccount
 		try
 		{
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost/username_password","root","rishi");
+			Connection con = DriverManager.getConnection("jdbc:mysql://192.168.137.1:3306/username_password","root","sachin");
 			Statement stat = con.createStatement();
 			int id = Integer.parseInt(id_tf.getText());
 			stat.executeUpdate("delete from user where id = '"+id+"' ");

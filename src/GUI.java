@@ -1,20 +1,18 @@
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
-import java.awt.BorderLayout;
-import java.awt.Component;
-import javax.swing.BoxLayout;
-import javax.swing.JLabel;
 import java.awt.FlowLayout;
-import javax.swing.JPasswordField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.DriverManager;
-import java.util.Arrays;
-import javax.swing.JButton;
 import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.Statement;
-import java.sql.ResultSet;;
+
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
 
 public class GUI
 {
@@ -76,7 +74,7 @@ public class GUI
     jf1.add(message);
     jf1.add(message_out);
 
-    jf1.validate();   // graphic objects are created after resizing so we ussed this
+    //jf1.validate();   // graphic objects are created after resizing so we ussed this
 
 
   }
@@ -87,7 +85,7 @@ public class GUI
     try
     {
       Class.forName("com.mysql.jdbc.Driver");
-      Connection con = DriverManager.getConnection("jdbc:mysql://localhost/username_password","root","rishi");
+      Connection con = DriverManager.getConnection("jdbc:mysql://192.168.137.1:3306/username_password","root","sachin");
       Statement stat1 = con.createStatement();
       Statement stat2 = con.createStatement();
       ResultSet rs1;
@@ -166,5 +164,10 @@ public class GUI
 
     }
   }
+
+
+
+
+
 
 }

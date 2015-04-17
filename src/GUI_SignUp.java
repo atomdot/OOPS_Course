@@ -2,17 +2,16 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Random;
 
 import javax.swing.BoxLayout;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JButton;
 import javax.swing.JPanel;
-import javax.swing.JTextField;;
+import javax.swing.JTextField;
 
 
 public class GUI_SignUp
@@ -61,9 +60,9 @@ public class GUI_SignUp
 		try
 		{
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost/username_password","root","rishi");
+			Connection con = DriverManager.getConnection("jdbc:mysql://192.168.137.1:3306/username_password","root","sachin");
 			Statement stat = con.createStatement();
-			int id = Integer.parseInt(id_tf.getText());
+			int id = Integer.parseInt(id_tf.getText()); // USED WRAPPER CLASSES
 			String name = name_tf.getText();
 			String password = password_tf.getText();
 			stat.executeUpdate("insert into user values('"+id+"','"+name+"','"+password+"')");
