@@ -1,20 +1,11 @@
-import java.awt.BorderLayout;
-import java.awt.Dimension;
-import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
-import java.io.IOException;
+import java.sql.SQLException;
 
-import javax.imageio.ImageIO;
-import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JButton;
-import javax.swing.JPanel;
-import javax.swing.JTree;
+import javax.swing.JFrame;
 
 
 public class GUI_AfterLogin
@@ -59,19 +50,28 @@ public class GUI_AfterLogin
 		{
 			if(e.getSource()==Entrn)
 			{
-				GUI_Questions page5 = new GUI_Questions("Entertainment");
+				try {GUI_Questions page5 = new GUI_Questions("Entertainment","entrn");
+				jf2.dispose();}
+				catch (SQLException e1) {e1.printStackTrace();}
 			}
 			else if(e.getSource()==Sprt)
 			{
-				GUI_Questions page5 = new GUI_Questions("Sports");
+				try {GUI_Questions page5 = new GUI_Questions("Sports","sports");
+				jf2.dispose();}
+				catch (SQLException e1) {e1.printStackTrace();}
 			}
 			else if(e.getSource()==Tech)
 			{
-				GUI_Questions page5 = new GUI_Questions("Technical");
+				try {GUI_Questions page5 = new GUI_Questions("Technical","tech");
+				jf2.dispose();}
+				catch (SQLException e1) {e1.printStackTrace();
+				}
 			}
 			else if(e.getSource()==gk)
 			{
-				GUI_Questions page5 = new GUI_Questions("General Knowledge");
+				try {GUI_Questions page5 = new GUI_Questions("General Knowledge","gk");
+				jf2.dispose();}
+				catch (SQLException e1) {e1.printStackTrace();}
 			}
 
 		}
